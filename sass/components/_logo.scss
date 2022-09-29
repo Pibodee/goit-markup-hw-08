@@ -1,0 +1,25 @@
+.logo {
+  display: block;
+  font-family: var(--secondary-font);
+  @include fonts(700, 26px, 31px, 00.03em);
+  color: var(--active-link-txt);
+  text-decoration: none;
+}
+
+.logo--dark {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.logo__text--dark {
+  color: var(--main-link-cl);
+}
+
+.logo--bright {
+  margin-bottom: 20px;
+}
+
+.logo__text--bright {
+  color: var(--additional-txt-cl);
+}

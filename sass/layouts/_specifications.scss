@@ -1,0 +1,43 @@
+/**
+  |============================
+  | Specifications
+  |============================
+*/
+
+.section{
+@include section (94px, 94px);
+}
+
+
+
+.specifications__item {
+  --items: 4;
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+.specifications__icon {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: var(--secondary-bg-cl);
+  border-radius: 4px;
+}
+
+.specifications__subtitle {
+    margin-bottom: 10px;
+    @include fonts ($fw: 700, $lh: 16px, $ls: 00.03em);
+//   font-size: 14px;
+//   letter-spacing: 0.03em;
+//   line-height: calc(16 / 14);
+}
+
+.specifications__text{
+    @include fonts ();
+//  font-size: 14px;
+//  line-height: calc(24 / 14);
+//  letter-spacing: 0.03em;
+
+ color: var(--secondary-txt-cl);}

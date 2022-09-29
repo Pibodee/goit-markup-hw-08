@@ -1,0 +1,120 @@
+/**
+  |============================
+  | Footer
+  |============================
+*/
+.footer {
+  background-color: var(--hero-bg-cl);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-nav {
+  margin-right: 70px;
+}
+
+
+.address-list__address {
+  display: block;
+  margin-bottom: 10px;
+
+  @include fonts();
+  font-style: normal;
+  // line-height: calc(24 / 14);
+  text-decoration: none;
+
+  color: var(--additional-txt-cl);
+
+  @include transition (color);
+
+  &:hover,
+  &:focus {
+    color: var(--active-link-txt);
+  }
+}
+
+.address-list__link {
+  display: block;
+
+  font-style: normal;
+  line-height: calc(24 / 14);
+  text-decoration: none;
+
+  color: var(--address-link-cl);
+
+ @include transition (color);
+
+  &:hover,
+  &:focus {
+    color: var(--active-link-txt);
+  }
+}
+
+.address-list__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer__strong {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  @include fonts($fw: 700, $lh: 16px, $ls: 00.03em);
+  // font-size: 14px;
+  // line-height: calc(16 / 14);
+  // letter-spacing: 0.03em;
+
+  color: var(--additional-txt-cl);
+}
+
+.footer-socials {
+  margin-right: auto;
+}
+
+.subscription-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.subscribtion-box__field {
+  display: block;
+  margin-right: 12px;
+}
+
+.subscription-box__input {
+  display: block;
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  background-color: inherit;
+  color: var(--additional-txt-cl);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+   @include transition (border-color);
+}
+
+.subscription-box__input:focus {
+  border-color: var(--active-link-txt);
+  outline: none;
+}
+
+.subscribe-btn {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 28px;
+}
+
+.subscribe-btn__icon {
+  fill: var(--additional-txt-cl);
+}

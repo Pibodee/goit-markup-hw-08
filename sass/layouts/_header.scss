@@ -1,0 +1,109 @@
+/**
+  |============================
+  | Header
+  |============================
+*/
+
+.header {
+  font-weight: 500;
+  border-bottom: 1px solid var(--border-cl);
+}
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.nav__list {
+  list-style: none;
+
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include fonts($fw: 500, $lh: 16px);
+
+  //   letter-spacing: 0.02em;
+  //   font-size: 14px;
+  //   line-height: calc(16.41 / 14);
+
+  text-decoration: none;
+  color: currentColor;
+
+ @include transition (color);
+
+  &:hover,
+  &:focus {
+    color: var(--active-link-txt);
+  }
+}
+
+.current {
+  color: var(--active-link-txt);
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: -1.5%;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+    background-color: var(--active-link-txt);
+    border-radius: 2px;
+  }
+}
+
+.contacts {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.contacts__link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  @include fonts($lh: 16px);
+  color: var(--secondary-txt-cl);
+
+  @include transition (color);
+
+
+  &:hover,
+  &:focus {
+    color: var(--active-link-txt);
+    .contacts__icon {
+      stroke: var(--active-link-txt);
+    }
+  }
+}
+.contacts__icon {
+  fill: none;
+  stroke: var(--secondary-txt-cl);
+
+   @include transition (stroke);
+}
