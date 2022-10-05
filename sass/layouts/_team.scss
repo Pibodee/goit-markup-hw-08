@@ -8,9 +8,28 @@
   background-color: var(--secondary-bg-cl);
 }
 
-.grid__card {
-  --items: 4;
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+.team__list{
+  display: block;
+
+  @media screen and (min-width: 768px) {
+  @include list (block, null, null, null);
+  @include list (center, center);}
+}
+
+.list__card {
+  @media screen and (max-width: 767px) {
+  &:not(:last-child){
+  margin-bottom: 30px; 
+  } }
+@media screen and (min-width: 768px) {
+  @include item (1, var(--gap), 2)
+}
+
+@media screen and (min-width: 1200px) {
+  @include item (3, var(--gap), 4)
+}
+  // --items: 4;
+  // flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 
   background-color: var(--additional-bg-cl);
 }

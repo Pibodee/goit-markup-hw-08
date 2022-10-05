@@ -4,10 +4,16 @@
   |============================
 */
 .activities-section {
-  @include section(0, 94px);
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+     @include section(0, 94px);
+  }
+
+
 }
 
-.grid__item {
+.list__item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 

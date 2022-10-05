@@ -14,9 +14,13 @@
 }
 
 .nav {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
   display: flex;
   align-items: center;
   margin-right: auto;
+  }
 }
 
 .nav__list {
@@ -72,11 +76,17 @@
 }
 
 .contacts {
+
+  display: none;
+
+  @media screen and (min-width: 1200px) {
   list-style: none;
 
   display: flex;
   align-items: center;
   gap: 50px;
+  }
+
 }
 
 .contacts__link {

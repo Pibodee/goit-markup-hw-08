@@ -2,7 +2,7 @@
 
 @import './decimals';
 
-@mixin section ($pt: 94px, $pb: 94px){
+@mixin section ($pt: 60px, $pb: 60px){
     padding-top: $pt;
     padding-bottom: $pb;
 }
@@ -19,8 +19,18 @@
     transition-property: $one, $two, $three;
     transition-duration: $time;
     transition-timing-function: $func;
+}
 
 
+@mixin list($jc: null, $ai: null, $d: flex, $gap: var(--gap)){
+    display: $d;
+    gap: $gap;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin item ($q-gap, $gap, $q-item) {
+    flex-basis: calc((100% - #{$q-gap} * #{$gap}) / #{$q-item});
 }
 
 // @mixin font($ff, $fs, $fw, $lh, $ls, $fc) {
