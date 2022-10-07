@@ -60,10 +60,7 @@
   @media screen and (min-width: 1200px) {
     width: 696px;
     @include fonts(900, 44px, 60px, 00.06em);
-    // font-weight: 900;
-    // font-size: 44px;
-    // line-height: calc(60 / 44);
-    // letter-spacing: 0.06em;
+
   }
 }
 
