@@ -10,10 +10,14 @@
   padding-top: 16px;
   padding-bottom: 16px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
   padding-top: 24px;
   padding-bottom: 24px;
-  margin-right: 93px;
+  margin-right: 87px;
+  }
+
+  @media screen and (min-width: 1200px){
+   margin-right: 93px;  
   }
 }
 .logo__text--dark {

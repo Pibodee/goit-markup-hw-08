@@ -8,13 +8,16 @@
 @include section ();
 }
 
-
+.specifications{
+  align-items: baseline;
+}
 
 .specifications__item {
   
   max-width: 450px;
   &:not(:last-child){
-    margin-bottom: 30px;
+    @media screen and (max-width: 767px){
+    margin-bottom: 30px;}
   }
 
    @media screen and (min-width: 768px) {
@@ -24,8 +27,7 @@
 
   @media screen and (min-width: 1200px) {
   width: 270px;
-      --items: 4;
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+  @include item (3, var(--gap), 4);
   }
 }
 

@@ -127,15 +127,8 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-  gap: 7px;
-   @include fonts ($fs: 12px, $lh: 14px, $ls: 0.03em);
-
-  @media screen and (min-width: 1200px) {
-   @include fonts ($fs: 14px, $lh: 14px, $ls: 0.03em);
-  }
-  
-  // font-size: 14px;
-  // line-height: calc(24 / 14);
+  gap: 8px;
+   
   color: var(--secondary-txt-cl);
 
  
@@ -143,10 +136,14 @@
 
 
 .register-form__desc {
-  display: block;
-  text-align: center;
-  user-select: none;
-  padding-left: 24px;
+  
+  @include fonts ($fs: 12px, $lh: 14px, $ls: 0.03em);
+
+@media screen and (min-width: 1200px) {
+ @include fonts ($fs: 14px, $lh: 14px, $ls: 0.03em);
+  }
+ user-select: none;
+
 }
 
 .register-form__link {

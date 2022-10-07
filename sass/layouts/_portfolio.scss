@@ -32,26 +32,34 @@
 /* gallery */
 
 .gallery{
+  display: flex;
+  flex-wrap: wrap;
    @media screen and (min-width: 768px) {
-    @include list (flex-start, center);
+    @include list (flex-start, flex-start);
     // flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-
+   }
+  
+    @media screen and (min-width:1200px) {
+    @include list (center, center);
   }
 }
 
 /* cards */
 .gallery__card {
 
- max-width: 450px;
+  display: flex;
+  max-width: 450px;
+    background-color: var(--additional-bg-cl);
 
   @media screen and (min-width: 768px) {
     @include item (1, var(--gap), 2);
-
     // flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-
   }
   
-  background-color: var(--additional-bg-cl);
+  @media screen and (min-width: 1200px){
+    @include item (2, var(--gap), 3);
+  }
+
 }
 
 .gallery__card:hover .card__overlay {
@@ -96,10 +104,6 @@
   color: var(--additional-txt-cl);
 }
 
-.card__wrap{
-  display: flex;
-  flex-direction: column;
-}
 
 .card__box {
   display: flex;
@@ -132,11 +136,11 @@
 }
 
 .card__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
 
  @include transition (box-shadow);
-
   &:hover,
   &:focus {
     .card__wrap {
