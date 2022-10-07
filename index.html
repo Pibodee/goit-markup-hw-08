@@ -156,7 +156,7 @@
                 srcset="./images/Team/img1_m@1x.jpg 1x, ./images/Team/img1_m@2x.jpg 2x" />
                 <!-- Mobile -->
                 <source 
-                media="(min-width: 480px)" 
+                media="(max-width: 767px)" 
                 srcset="./images/Team/img1_s@1x.jpg 1x, ./images/Team/img1_s@2x.jpg 2x" />
               <img class="img"
                src="./images/Team/img1_s@1x.jpg" alt="Ігор Дем'яненко"/>
@@ -200,7 +200,7 @@
                 srcset="./images/Team/img2_m@1x.jpg 1x, ./images/Team/img2_m@2x.jpg 2x" />
                 <!-- Mobile -->
                 <source 
-                media="(min-width: 480px)" 
+                media="(max-width: 767px)" 
                 srcset="./images/Team/img2_s@1x.jpg 1x, ./images/Team/img2_s@2x.jpg 2x" />
               <img class="img"
                src="./images/Team/img2_s@1x.jpg" alt="Ольга Рєпіна"/>
@@ -244,7 +244,7 @@
                 srcset="./images/Team/img3_m@1x.jpg 1x, ./images/Team/img3_m@2x.jpg 2x" />
                 <!-- Mobile -->
                 <source 
-                media="(min-width: 480px)" 
+                media="(max-width: 767px)" 
                 srcset="./images/Team/img3_s@1x.jpg 1x, ./images/Team/img3_s@2x.jpg 2x" />
               <img class="img"
                src="./images/Team/img3_s@1x.jpg" alt="Микола Тарасов"/>
@@ -288,7 +288,7 @@
                 srcset="./images/Team/img4_m@1x.jpg 1x, ./images/Team/img4_m@2x.jpg 2x" />
                 <!-- Mobile -->
                 <source 
-                media="(min-width: 480px)" 
+                media="(max-width: 767px)" 
                 srcset="./images/Team/img4_s@1x.jpg 1x, ./images/Team/img4_s@2x.jpg 2x" />
               <img class="img"
                src="./images/Team/img4_s@1x.jpg" alt="Михайло Єрмаков"/>
@@ -489,11 +489,30 @@
       </button>
 
       <ul class="mobile-menu">
-        <li><a href="" class="link">About</a></li>
-        <li><a href="" class="link">Products</a></li>
-        <li><a href="" class="link">Contacts</a></li>
-        <li><a href="" class="link">Career</a></li>
-      </ul>
+        <li class="mobile-menu__item">
+              <a class="mobile-menu__link current" href="./index.html">Студія</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Контакти</a></li>
+          </ul>
+        </nav>
+        <ul class="mobile-contacts">
+          <li class="mobile-contacts__item">
+            <a href="tel:+380961111111" class="mobile-contacts__link mobile-contacts__link--tel">+38 096 111 11 11</a>
+          </li>
+          <li class="mobile-contacts__item">
+            <a href="mailto:info@devstudio.com" class="mobile-contacts__link mobile-contacts__link--mail">info@devstudio.com</a
+            >
+            </li>
+        </ul>
+        <ul class="mobile-socials">
+          <li class="mobile-socials__item"><a href="https://www.instagram.com/" class="mobile-socials__link">Instagram</a></li>
+          <li class="mobile-socials__item"><a href="https://twitter.com/" class="mobile-socials__link">Twitter</a></li>
+          <li class="mobile-socials__item"><a href="https://www.facebook.com/" class="mobile-socials__link">Facebook</a></li>
+          <li class="mobile-socials__item"><a href="https://www.linkedin.com/" class="mobile-socials__link">LinkedIn</a></li>
+        </ul>
     </div>
     <!-- Modal script -->
     <script src="./js/modal.js"></script>

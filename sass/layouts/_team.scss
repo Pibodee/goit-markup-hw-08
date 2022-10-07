@@ -12,15 +12,13 @@
   display: block;
 
   @media screen and (min-width: 768px) {
-  @include list (block, null, null, null);
   @include list (center, center);}
 }
 
 .list__card {
-  @media screen and (max-width: 767px) {
-  &:not(:last-child){
+    &:not(:last-child){
   margin-bottom: 30px; 
-  } }
+  }
 @media screen and (min-width: 768px) {
   @include item (1, var(--gap), 2)
 }

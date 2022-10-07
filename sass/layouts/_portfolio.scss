@@ -10,20 +10,47 @@
 /* filter */
 .portfolio__filter {
   display: flex;
-  justify-content: center;
   gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 
   list-style: none;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    // justify-content: center;
+    margin-bottom: 50px;
+  }
 }
+
 
 
 /* gallery */
 
+.gallery{
+   @media screen and (min-width: 768px) {
+    @include list (flex-start, center);
+    // flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+
+  }
+}
+
 /* cards */
 .gallery__card {
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 
+ max-width: 450px;
+
+  @media screen and (min-width: 768px) {
+    @include item (1, var(--gap), 2);
+
+    // flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+
+  }
+  
   background-color: var(--additional-bg-cl);
 }
 
@@ -69,9 +96,17 @@
   color: var(--additional-txt-cl);
 }
 
-.card__box {
-  padding: 20px 24px;
+.card__wrap{
+  display: flex;
+  flex-direction: column;
+}
 
+.card__box {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+  flex-grow: 1;
+  
   border: 1px solid var(--border-cl);
   border-top: none;
 }
@@ -88,7 +123,7 @@
 }
 
 .card__text {
-  @include fonts($fs: 16px, $lh: 36px, $ls: 00.03em);
+  @include fonts($fs: 16px, $lh: 30px, $ls: 00.03em);
   // font-size: 16px;
   // line-height: calc(30 / 16);
   // letter-spacing: 0.03em;

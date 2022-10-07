@@ -19,12 +19,20 @@
 }
 
 .modal {
-  width: 528px;
-  height: 581px;
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: calc(100% - 30px);
+  max-width: 450px;  
+ 
+
+  @media screen and (min-width: 1200px) {
+  width: 528px;
+  height: 581px;
+  }
+
   padding: 40px;
 
   background-color: var(--additional-bg-cl);

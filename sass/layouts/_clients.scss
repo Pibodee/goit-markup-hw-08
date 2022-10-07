@@ -34,7 +34,7 @@
   &:hover,
   &:focus {
     border: 1px solid var(--active-link-txt);
-    .client-grid__icon {
+    .client-list__icon {
       fill: var(--active-link-txt);
     }
   }

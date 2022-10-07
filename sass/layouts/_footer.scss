@@ -10,12 +10,21 @@
 }
 
 .footer__container {
+  @media screen and (min-width: 1200px) {
   display: flex;
   align-items: baseline;
+  }
+
 }
 
-.footer-nav {
-  margin-right: 70px;
+.footer-nav {  
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+   @media screen and (min-width: 1200px) {
+    margin-right: 70px;}
 }
 
 .address-list{
@@ -46,7 +55,7 @@
   display: block;
 
   font-style: normal;
-  line-height: calc(24 / 14);
+  @include fonts();
   text-decoration: none;
 
   color: var(--address-link-cl);
@@ -64,9 +73,14 @@
 }
 
 .footer__strong {
+
   display: block;
   text-transform: uppercase;
   margin-bottom: 20px;
+
+   @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 
   @include fonts($fw: 700, $lh: 16px, $ls: 00.03em);
   // font-size: 14px;
@@ -77,25 +91,43 @@
 }
 
 .footer-socials {
-  margin-right: auto;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+      margin-right: auto;
+  }
+
+}
+
+.footer-input{
+  width: 100%;
 }
 
 .subscription-box {
+  display: block;
+
+  width: 100%;
+
+  @media screen and (min-width: 1200px) {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  align-items: center;}
 }
 
 .subscribtion-box__field {
   display: block;
-  margin-right: 12px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+   margin-right: 12px;
+  }
+  
 }
 
 .subscription-box__input {
   display: block;
-  width: 358px;
-  height: 50px;
+  min-height: 50px;
+  width: 100%;
+
   padding: 15px 16px;
   background-color: inherit;
   color: var(--additional-txt-cl);
@@ -103,12 +135,17 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
    @include transition (border-color);
+
+   &:focus{
+     border-color: var(--active-link-txt);
+    outline: none;
+   }
+   
+  @media screen and (min-width:1200px) {
+  width: 358px;
+  }  
 }
 
-.subscription-box__input:focus {
-  border-color: var(--active-link-txt);
-  outline: none;
-}
 
 .subscribe-btn {
   width: 200px;
@@ -117,6 +154,11 @@
   align-items: center;
   gap: 10px;
   padding: 10px 28px;
+
+  @media screen and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .subscribe-btn__icon {

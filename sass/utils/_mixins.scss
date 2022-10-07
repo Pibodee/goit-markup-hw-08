@@ -23,10 +23,10 @@
 
 
 @mixin list($jc: null, $ai: null, $d: flex, $gap: var(--gap)){
-    display: $d;
-    gap: $gap;
     justify-content: $jc;
     align-items: $ai;
+     display: $d;
+    gap: $gap;
 }
 
 @mixin item ($q-gap, $gap, $q-item) {
