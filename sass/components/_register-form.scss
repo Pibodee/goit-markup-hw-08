@@ -89,10 +89,6 @@
 }
 
 
-.register-form__icons {
-  position: absolute;
-  left: 0;
-}
 
 .register-form__icon-checked {
   opacity: 0;
@@ -123,11 +119,11 @@
 
 .register-form__agreement {
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
   gap: 8px;
+  width: 100%;
    
   color: var(--secondary-txt-cl);
 
