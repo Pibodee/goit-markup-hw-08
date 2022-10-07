@@ -17,9 +17,9 @@
   display: none;
 
   @media screen and (min-width: 768px) {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
   }
 }
 
@@ -50,7 +50,7 @@
   text-decoration: none;
   color: currentColor;
 
- @include transition (color);
+  @include transition(color);
 
   &:hover,
   &:focus {
@@ -76,23 +76,21 @@
 }
 
 .contacts {
-
   display: none;
 
   @media screen and (min-width: 768px) {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
-  @media screen and (min-width: 1200px){
-   flex-direction: row;
-  align-items: center;
-  gap: 50px;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
   }
-
 }
 
 .contacts__link {
@@ -104,13 +102,12 @@
   @include fonts($lh: 16px);
   color: var(--secondary-txt-cl);
 
-  @include transition (color);
+  @include transition(color);
 
   @media screen and (min-width: 1200px) {
-     padding-top: 32px;
-  padding-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
-
 
   &:hover,
   &:focus {
@@ -124,5 +121,5 @@
   fill: none;
   stroke: var(--secondary-txt-cl);
 
-   @include transition (stroke);
+  @include transition(stroke);
 }

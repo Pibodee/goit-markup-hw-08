@@ -1,10 +1,9 @@
-// styles 
+// styles
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-
 
 body {
   font-family: var(--main-font);
@@ -21,17 +20,16 @@ body {
 .title {
   text-align: center;
   margin-bottom: 30px;
-  @include fonts (700, 28px, 33px, 00.03em);
+  @include fonts(700, 28px, 33px, 00.03em);
 
   @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
-    @include fonts (700, 36px, 42px, 00.03em);
+    @include fonts(700, 36px, 42px, 00.03em);
   }
 
-  
-//   font-size: 36px;
-//   letter-spacing: 0.03em;
-//   line-height: calc(42 / 36);
+  //   font-size: 36px;
+  //   letter-spacing: 0.03em;
+  //   line-height: calc(42 / 36);
 }
 
 // .grid {
@@ -45,5 +43,5 @@ body {
 //     display: flex;
 //     flex-wrap: wrap;
 //     gap: 30px;
-//   }   
+//   }
 // }

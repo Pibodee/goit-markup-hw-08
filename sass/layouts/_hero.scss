@@ -9,7 +9,7 @@
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  @include section (118px, 118px);
+  @include section(118px, 118px);
 
   background-repeat: no-repeat;
   background-position: center;
@@ -60,8 +60,5 @@
   @media screen and (min-width: 1200px) {
     width: 696px;
     @include fonts(900, 44px, 60px, 00.06em);
-
   }
 }
-
-
