@@ -5,8 +5,10 @@
 */
 .footer {
   background-color: var(--hero-bg-cl);
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @include section ();
+  @media screen and (min-width: 1200px) {
+    @include section (94px, 94px);
+  }
 }
 
 .footer__container {
@@ -17,28 +19,30 @@
 }
 
 .footer__wrap {
-  @media screen and (min-width: 768px) {
+    margin-bottom: 60px;
+  @media screen and (min-width: 768px)  {
     display: flex;
     justify-content: center;
     align-items: baseline;
     gap: 165px;
-    margin-bottom: 60px;
   }
-  @media screen and (min-width: 1200px) {
+
+   @media screen and (min-width: 1200px) {
     margin-bottom: 0;
     margin-right: auto;
-    gap: 70px;
+    gap: 0;
   }
 }
 
 .footer-nav {
+  text-align: center;
   @media screen and (max-width: 767px) {
-    text-align: center;
-    margin-bottom: 60px;
+  margin-bottom: 60px;
   }
 
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
+    text-align: start;
   }
 }
 
@@ -104,8 +108,7 @@
 }
 
 .footer-socials {
-  margin-bottom: 60px;
-  @media screen and (min-width: 1200px) {
+   @media screen and (min-width: 1200px) {
     margin-right: auto;
   }
 }

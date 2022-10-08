@@ -12,9 +12,12 @@ body {
 }
 
 .list {
-  @include list($jc: center, $ai: center);
-  flex-wrap: wrap;
   list-style: none;
+
+  @media screen and (min-width: 768px) {
+    @include list($jc: center, $ai: center);
+    flex-wrap: wrap; 
+  }
 }
 
 .title {
@@ -45,3 +48,10 @@ body {
 //     gap: 30px;
 //   }
 // }
+
+.section {
+  @include section();
+  @media screen and (min-width:1200px) {
+    @include section (94px, 94px);
+  }
+}

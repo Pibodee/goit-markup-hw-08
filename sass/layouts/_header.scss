@@ -104,6 +104,13 @@
 
   @include transition(color);
 
+  &--top{
+    padding-top: 20px;
+  }
+  &--bottom{
+    padding-bottom: 20px;
+  }
+
   @media screen and (min-width: 1200px) {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -116,6 +123,7 @@
       stroke: var(--active-link-txt);
     }
   }
+  
 }
 .contacts__icon {
   fill: none;

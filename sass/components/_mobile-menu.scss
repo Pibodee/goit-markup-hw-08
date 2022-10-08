@@ -11,6 +11,12 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  @include transition (fill);
+
+  &:hover,
+  &:focus{
+    fill: var(--active-link-txt);
+  }
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -75,7 +81,7 @@
   text-decoration: none;
   @include fonts(500, 40px, 47px);
   color: var(--main-txt-cl);
-
+  &--current,
   &:focus {
     color: var(--active-link-txt);
   }

@@ -15,6 +15,10 @@
   background-position: center;
   background-size: cover;
 
+  // @media screen and (min-width: 768px) {
+  //   @include section ();
+  // }
+
   // Mobile
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero/HeroImg_s@1x.jpg);
 
@@ -33,13 +37,16 @@
 
   // Desktop
   @media screen and (min-width: 769px) {
-    @include section(200px, 200px);
+    
 
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero/HeroImg_l@1x.jpg);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero/HeroImg_l@2x.jpg);
     }
+  }
+  @media screen and (min-width: 1200px) {
+    @include section(200px, 200px);
   }
 }
 

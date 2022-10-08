@@ -5,6 +5,9 @@
 */
 .portfolio {
   @include section();
+  @media screen and (min-width: 1200px) {
+    @include section (94px, 94px);
+  }
 }
 
 /* filter */
@@ -30,11 +33,12 @@
 /* gallery */
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-
-  //     @media screen and (min-width:1200px) {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+   //     @media screen and (min-width:1200px) {
   //     @include list (center, center);
   //   }
   // }
@@ -45,9 +49,11 @@
   display: flex;
   max-width: 450px;
   background-color: var(--additional-bg-cl);
+  margin-bottom: 30px;
 
   @media screen and (min-width: 768px) {
     @include item(1, var(--gap), 2);
+    margin-bottom: 0;
     // flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
   }
 
@@ -80,11 +86,21 @@
 
   width: 100%;
   height: 100%;
-  padding: 64px 23px;
+  padding: 77px 24px;
 
+  
+  overflow-y: scroll;
+
+  @media screen and (min-width: 768px) {
   display: flex;
   align-items: center;
   justify-content: center;
+  }
+
+  @media screen and (min-width: 768px){
+    padding-top: 63px;
+    padding-bottom: 63px;
+  }
 
   @include transition(transform);
 
@@ -99,8 +115,6 @@
 }
 
 .card__box {
-  display: flex;
-  flex-direction: column;
   padding: 20px 24px;
   flex-grow: 1;
 
@@ -136,7 +150,7 @@
   @include transition(box-shadow);
   &:hover,
   &:focus {
-    .card__wrap {
+    .card__box {
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
   }
